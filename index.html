@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="padding-movile padding-tablet padding-desktop flex-row-desktop">
+  <header class="header flex-basis" style="--flex-basis: 14%">
+    <img src="assets/Logo_Alura.png" alt="Logo Alura">
+  </header>
+  <main class="main flex-row-desktop flex-basis" style="--flex-basis: 86%">
+    <section class="flex-basis" style="--flex-basis: 60%">
+      <textarea name="encryptor" id="encryptor" placeholder="Enter text here" class="textarea"></textarea>
+      <p class="flex-row">
+        <img src="assets/bi_exclamation-circle-fill.png" alt="Warning"> <small>Only lowercase letters and no accent
+          marks</small>
+      </p>
+      <div class="flex-column-movile flex-row-tablet">
+        <button class="btn"
+          style="--bg-button-color: var(--dark-blue-color); --text-button-color: var(--white-color); --hover-bg-color: var(--light-blue); --hover-text-color: var(--dark-blue-color); --border-color: var(--dark-blue-color)"
+          onclick="getTextEncrypt()">
+          Encrypt
+        </button>
+        <button class="btn"
+          style="--bg-button-color: var(--light-blue); --text-button-color: var(--dark-blue-color); --hover-bg-color: var(--dark-blue-color); --hover-text-color: var(--white-color); --border-color: var(--dark-blue-color)"
+          onclick="getTextDecrypt()">
+          Decrypt
+        </button>
+      </div>
+    </section>
+    <section class="flex-basis" style="--flex-basis: 40%">
+      <article class="show-text-encrypt">
+        <img src="assets/Muñeco.png" alt="Muñeco">
+        <h2>No messages found</h2>
+        <p>
+          Enter the text you want to encrypt or decrypt.
+        </p>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
