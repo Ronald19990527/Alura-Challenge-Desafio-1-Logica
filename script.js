@@ -1,7 +1,6 @@
 ((d) => {
   const $textAreaHeightAuto = d.querySelector(".textarea"),
   $showTextEncrypt = d.querySelector(".show-text-encrypt");
-  let value = $textAreaHeightAuto.value;
 
   $textAreaHeightAuto.addEventListener("keyup", e => {
     $textAreaHeightAuto.style.height = "auto";
