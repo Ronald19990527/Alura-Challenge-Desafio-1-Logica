@@ -1,6 +1,6 @@
 ((d) => {
   const $textAreaHeightAuto = d.querySelector(".textarea"),
-  $textArea = d.querySelector(".textarea");
+  $showTextEncrypt = d.querySelector(".show-text-encrypt");
 
   $textAreaHeightAuto.addEventListener("keyup", e => {
     $textAreaHeightAuto.style.height = "auto";
@@ -9,16 +9,24 @@
 
     $textAreaHeightAuto.style.height = `${textAreaHeight}px`;
   })
+
+  if ($textAreaHeightAuto.value === "") {
+    $showTextEncrypt.innerHTML = `
+      <img src="assets/Muñeco.png" alt="Muñeco">
+      <h2>No messages found</h2>
+      <p>
+        Enter the text you want to encrypt or decrypt.
+      </p>
+    `;
+  }
 })(document);
 
 function getTextEncrypt() {
   const $text = document.querySelector(".textarea"),
-  $showTextEncrypt = document.querySelector(".show-text-encrypt"),
-  $btn = document.createElement("button");
-  let value = $text.value,
-  textEncrypt = "";
+  $showTextEncrypt = document.querySelector(".show-text-encrypt");
+  let textEncrypt = "";
 
-  if (value != "") {
+  if ($text.value != "") {
     $showTextEncrypt.removeChild($showTextEncrypt.firstElementChild);
     $showTextEncrypt.removeChild($showTextEncrypt.children[1]);
     $showTextEncrypt.removeChild($showTextEncrypt.lastElementChild);
